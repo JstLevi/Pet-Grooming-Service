@@ -38,7 +38,7 @@ const index = () => {
         />
         <TextInput
         style={styles.EmailAddress}
-        placeholder="Enter Email Address"
+        placeholder="Enter Username/Email Address"
         keyboardType='email-address'
         />
       </View>
