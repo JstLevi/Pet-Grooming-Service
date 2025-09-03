@@ -68,7 +68,7 @@ const index = () => {
 
       <View style={styles.passwordInputContainer}>
         <Feather 
-        name='shield'
+        name='lock'
         size= {30}
         color="292D32"
         style={styles.passwordIcon}
@@ -76,6 +76,7 @@ const index = () => {
         <TextInput
         style={styles.password}
         placeholder="Enter Password"
+        secureTextEntry={true}
         />
       </View>
 
@@ -86,7 +87,7 @@ const index = () => {
 
       <View style={styles.ConfirmpasswordInputContainer}>
         <Feather 
-        name='shield'
+        name='lock'
         size= {30}
         color="292D32"
         style={styles.ConfirmpasswordIcon}
@@ -94,15 +95,26 @@ const index = () => {
         <TextInput
         style={styles.Confirmpassword}
         placeholder="Re-enter Password"
+        secureTextEntry={true}
         />
       </View>
 
-      <TouchableOpacity 
-      style={styles.signupBotton}
-      onPress={() => Alert.alert("Success", "Account created successfully!")}
-      >
+      <TouchableOpacity style={styles.signupBotton}>
         <Text style={styles.signupTextBotton}>Sign Up</Text>
       </TouchableOpacity>
+
+
+      <View style={styles.noticesignupContainer}> 
+        <Text style={styles.noticesignup}> Already have an Account?
+        <Link href="/">
+        <Text style={styles.proceedLogin}> Log in</Text>
+        </Link>
+        </Text> 
+        
+     </View>
+
+
+
 
     
 
@@ -300,18 +312,13 @@ const styles = StyleSheet.create({
 
 
   noticesignupContainer: {
+    alignItems: "center",
+    paddingVertical: 20,
 
   },
   noticesignup: {
 
   },
-
-  notice_signupContainer: {
-    //backgroundColor: "blue",
-    alignItems: "center",
-    paddingVertical: 20,
-  },
-
 
   proceedLogin: {
     color: "#4A90E2",
