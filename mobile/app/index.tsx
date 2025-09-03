@@ -68,7 +68,7 @@ const index = () => {
 
       <View style={styles.passwordInputContainer}>
         <Feather 
-        name='shield'
+        name='lock'
         size= {30}
         color="292D32"
         style={styles.passwordIcon}
@@ -76,6 +76,7 @@ const index = () => {
         <TextInput
         style={styles.password}
         placeholder="Enter Password"
+        secureTextEntry={true}
         />
       </View>
 
@@ -86,7 +87,7 @@ const index = () => {
 
       <View style={styles.ConfirmpasswordInputContainer}>
         <Feather 
-        name='shield'
+        name='lock'
         size= {30}
         color="292D32"
         style={styles.ConfirmpasswordIcon}
@@ -94,6 +95,7 @@ const index = () => {
         <TextInput
         style={styles.Confirmpassword}
         placeholder="Re-enter Password"
+        secureTextEntry={true}
         />
       </View>
 
